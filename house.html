@@ -1,0 +1,169 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Basic CSS House
+	</title>
+	<style>
+		body{
+			text-align: center;
+			margin: 0;
+			padding: 0;
+		}
+		
+		#canvas{
+			margin: auto;
+			width: 600px;
+		}
+		
+		#chim{
+			top: 90px;
+			height: 20px;
+			width: 50px;
+			background-color: #ec0;
+			border: 5px solid;
+			border-color: #ec0 transparent #860 transparent;
+			float: right;
+			margin-left: 200px;
+			z-index: 3;
+			position: absolute;
+		}
+		
+		#smoke{
+			opacity: 0;
+			width: 50px;
+			background: #787878;
+			-webkit-transition: opacity 2s;			
+			-webkit-transition: height 2s;
+			-webkit-transition: border-radius 0.3s; 
+			-webkit-transition: margin-top 0.3s;
+			transition: opacity 2s;			
+			transition: height 2s;
+			transition: border-radius 0.3s; 
+			transition: margin-top 0.3s;			
+			height: 20px;			
+		}
+		
+		#smoke:hover{
+			height: 110px;
+			border-radius: 20px;
+			opacity: 0.65;
+			margin-top: -100px;
+			-webkit-transition: height 2s;
+			-webkit-transition: border-radius 0.3s; 
+			-webkit-transition: opacity 0.5s;
+			-webkit-transition: margin-top 0.3s;	
+			transition: height 2s;
+			transition: border-radius 0.3s; 
+			transition: opacity 0.5s;
+			transition: margin-top 0.3s;				
+		}
+		
+		#roof{
+			position: absolute;
+			width: 200px;
+			border-style: solid;
+			border-color: transparent transparent #860 transparent;
+			border-width: 200px;
+			margin: -100px 0 0 0;
+			background: transparent;
+			z-index: 1;
+		}
+		
+		#struc{	
+			position: absolute;
+			margin: 300px 50px;
+			width: 500px;
+			background: #ca0;
+			height: 400px;
+		}
+		
+		.window{
+			float: left; 
+			margin: 10px 70px;
+			display: block;
+			height: 100px;
+			width: 100px;
+			background: #fff;
+			z-index: 2;
+		}
+		
+		.shade{
+			background: #000;
+			height: 100px;
+			width: 100px;
+			-webkit-transition: border-bottom 0.4s;
+			-webkit-transition: height 0.5s;
+			transition: border-bottom 0.4s;
+			transition: height 0.5s;			
+			border-bottom: 15px #454545 solid;
+		}
+		
+		.window:hover{
+			-webkit-shadow: 0 0 10px #fff;			
+			box-shadow: 0 0 10px #fff;						
+		}
+		
+		.shade:hover{
+			height: 20px;
+			border-bottom: 20px #545454 solid;
+			box-shadow: 0 0 2px #fff;
+		}
+		
+		#door{
+			position: absolute;
+			width: 175px;
+			background: #970;
+			height: 200px;
+			bottom: 0;
+			left: 150px;
+			-webkit-transition: width 0.3s;	
+			transition: width 0.3s;				
+		}
+		
+		#door:hover{
+
+			width: 10px;
+		}
+		
+		#inside{
+			position: absolute;
+			width: 175px;
+			background: #fff;
+			height: 200px;
+			bottom: 0;
+			opacity: 0.1;							
+			-webkit-transition: opacity 1s;	
+			transition: opacity 1s;			
+			z-index: 4;
+		}
+		
+		#inside:hover{
+			opacity: 1;			
+		}
+	</style>
+</head>
+<body>
+<div id="canvas">
+<div id="chim">
+ <div id="smoke"></div>
+</div>
+<div id="roof">
+</div>
+<div id="struc">
+	<div class="window">
+		<div class="shade">
+		</div>
+	</div>
+	<div class="window">
+		<div class="shade">
+		</div>
+	</div>
+	<div id="door">
+		<div id="inside">
+		</div>
+	</div>
+</div>
+</div>
+</body>
+</html>
